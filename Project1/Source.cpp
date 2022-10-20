@@ -3,10 +3,10 @@
 
 
 
-bool brackets(char s[]) {
+bool brackets(std::string s) {
 	int c1 = 0, c2 = 0, c3 = 0;
 	char c = s[0];
-	for (int i = 0; c != '\0'; c = s[i]) {
+	for (int i = 0; i < s.size(); c = s[i]) {
 		i++;
 		if (c == '(')
 			c1++;
@@ -42,8 +42,21 @@ bool brackets(char s[]) {
 }
 
 int main(int argc, char* argv[]) {
+
+	std::string s;
+
+	for (int j = 1; j < argc; j++) {
+		
+		s += argv[j];
+		
+	}
 	
-	std::cout << (brackets(*argv) ? "true" : "false");
+	if (argc > 1) {
+		std::cout << (brackets(s) ? "true\n" : "false\n");
+	}
+	else
+		std::cout << "true\n";
+	
 	return 0;
 }
 

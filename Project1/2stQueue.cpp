@@ -25,19 +25,19 @@ public:
 		b.push(i);
 		n++;
 	}
-
+	/*
 	void push_front(int i) {
 		f.push(i);
 		n++;
 	}
-
+	*/
 	void throw_(std::stack <int> &a1, std::stack <int> &a2) {
 		while (a1.size() > 0) {
 			a2.push(a1.top());
 			a1.pop();
 		}
 	}
-
+	/*
 	int pop_back() {
 		if (b.size() == 0) {
 			throw_(f, b);
@@ -49,7 +49,7 @@ public:
 		return res;
 
 	}
-
+	*/
 	int pop_front() {
 		if (f.size() == 0) {
 			throw_(b, f);
